@@ -3,14 +3,14 @@ import classes from "./Counter.module.scss";
 
 type CounterPropsType = {
   number: number;
-  ms: number
+  ms: number;
 };
 
 const Counter = ({ number, ms }: CounterPropsType) => {
   const [value, setValue] = useState<number>(0);
 
   useEffect(() => {
-    let interval: NodeJS.Timer;
+    let interval: ReturnType<typeof setInterval>;
 
     if (value < number) {
       interval = setInterval(() => {

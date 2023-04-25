@@ -26,7 +26,7 @@ const Slider = ({ reviews }: SliderPropsType) => {
         }
       });
     };
-    let interval: NodeJS.Timer = setInterval(() => {
+    let interval: ReturnType<typeof setInterval> = setInterval(() => {
       nextSlide();
     }, 5000);
 
