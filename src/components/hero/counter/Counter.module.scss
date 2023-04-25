@@ -1,0 +1,13 @@
+@import "../../../index.scss";
+
+.counter {
+  font-size: 6rem;
+  @include larger {
+    font-size: 5rem;
+  }
+  @include micro {
+    font-size: 4rem;
+  }
+  font-weight: 900;
+  margin-bottom: 0.75rem;
+}

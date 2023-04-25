@@ -1,0 +1,178 @@
+@import "../../index.scss";
+
+.contact {
+  display: flex;
+  @include tiny {
+    flex-direction: column;
+    align-items: center;
+    gap: 10rem;
+  }
+  justify-content: space-between;
+  padding: 10rem var(--page-padding) 15rem var(--page-padding);
+  @include medium {
+    padding: 10rem calc(var(--page-padding) * 0.75) 15rem
+      calc(var(--page-padding) * 0.75);
+  }
+  @include smaller {
+    padding: 10rem calc(var(--page-padding) * 0.6) 15rem
+      calc(var(--page-padding) * 0.6);
+  }
+  @include small {
+    padding: 10rem calc(var(--page-padding) / 3) 15rem
+      calc(var(--page-padding) / 3);
+  }
+  @include tiny {
+    padding: 10rem calc(var(--page-padding) / 4) 15rem
+      calc(var(--page-padding) / 4);
+  }
+  @include stiny {
+    padding: 10rem calc(var(--page-padding) / 5) 15rem
+      calc(var(--page-padding) / 5);
+  }
+  @include mobile {
+    padding: 10rem calc(var(--page-padding) / 8) 15rem
+      calc(var(--page-padding) / 8);
+  }
+  @include smobile {
+    padding: 10rem calc(var(--page-padding) / 10) 15rem
+      calc(var(--page-padding) / 10);
+  }
+  @include piko {
+    padding: 5rem calc(var(--page-padding) / 10) 15rem
+      calc(var(--page-padding) / 10);
+  }
+  width: 100%;
+
+  .left {
+    font-weight: 900;
+    font-size: 13rem;
+    @include larger {
+      font-size: 12rem;
+    }
+    @include tiny {
+      font-size: 11rem;
+    }
+    @include smobile {
+      font-size: 10rem;
+    }
+    @include mini {
+      font-size: 8rem;
+    }
+    @include nano {
+      font-size: 5rem;
+    }
+    line-height: 140px;
+    @include smobile {
+      line-height: 120px;
+    }
+    @include mini {
+      line-height: 100px;
+    }
+    @include nano {
+      line-height: 70px;
+    }
+    color: var(--gold);
+    text-transform: uppercase;
+    position: relative;
+
+    @include tiny {
+      text-align: center;
+      br {
+        display: none;
+      }
+    }
+
+    span {
+      display: inline-block;
+      position: absolute;
+      top: 29rem;
+      width: 2.8rem;
+      height: 2.8rem;
+      @include nano {
+        width: 2rem;
+        height: 2rem;
+      }
+      border-radius: 50%;
+      background-color: #e25555;
+      @include tiny {
+        top: 15rem;
+      }
+      @include smobile {
+        top: 13rem;
+      }
+      @include mini {
+        top: 10rem;
+      }
+      @include nano {
+        top: 7rem;
+      }
+    }
+  }
+
+  .right {
+    width: 50%;
+    @include mobile {
+      width: 100%;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 3rem;
+
+      input,
+      textarea {
+        outline: none;
+        background-color: transparent;
+        border: none;
+        border-bottom: 1px solid var(--white);
+        padding: 1.5rem;
+        color: var(--white);
+        font-size: 2rem;
+        font-weight: 300;
+        font-family: "Lato";
+
+        &::placeholder {
+          text-transform: uppercase;
+        }
+      }
+
+      textarea {
+        border: 1px solid var(--white);
+        margin-top: 4.5rem;
+        resize: none;
+      }
+
+      div {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .status {
+          color: var(--gold);
+          font-size: 2.5rem;
+          @include stiny {
+            font-size: 1.5rem;
+          }
+          width: 50%;
+        }
+        button {
+          display: flex;
+          align-items: center;
+          gap: 1.5rem;
+          font-family: "Lato";
+          text-transform: uppercase;
+          font-weight: 500;
+          font-size: 2.6rem;
+          border: none;
+          background-color: transparent;
+          width: fit-content;
+          color: var(--white);
+          cursor: pointer;
+          margin-left: auto;
+        }
+      }
+    }
+  }
+}

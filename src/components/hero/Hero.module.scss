@@ -1,0 +1,144 @@
+@import "../../index.scss";
+
+.hero {
+  position: relative;
+  margin-top: 7.5rem;
+  @include stiny {
+    margin-top: 4.7rem;
+  }
+  width: 100%;
+  min-height: calc(100vh - 7.5rem);
+  @include stiny {
+    min-height: calc(100vh - 4.7rem);
+  }
+  display: flex;
+  align-items: center;
+
+  @include small {
+    align-items: center;
+    justify-content: center;
+  }
+
+  video {
+    position: absolute;
+    opacity: 0.35;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .text {
+    position: absolute;
+    width: 100%;
+    @include nano {
+      width: 80%;
+    }
+    left: 50%;
+    top: 50%;
+
+    @include small {
+      top: 40%;
+    }
+    @include ssmobile {
+      top: 35%;
+    }
+
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    h1 {
+      text-align: center;
+      @include small {
+        white-space: nowrap;
+      }
+      @include nano {
+        white-space: pre-wrap;
+      }
+      color: var(--gold);
+      font-size: 10rem;
+      @include larger {
+        font-size: 8rem;
+      }
+      @include mobile {
+        font-size: 7rem;
+      }
+      @include smobile {
+        font-size: 6rem;
+      }
+      @include ssmobile {
+        font-size: 5rem;
+      }
+      @include micro {
+        font-size: 4.5rem;
+      }
+      font-weight: 900;
+      margin-bottom: 1rem;
+    }
+
+    span {
+      text-align: center;
+      font-weight: 400;
+      font-size: 3.5rem;
+      @include larger {
+        font-size: 3rem;
+      }
+      @include small {
+        font-size: 2.5rem;
+      }
+      @include mobile {
+        font-size: 2.25rem;
+      }
+      @include smobile {
+        font-size: 2rem;
+      }
+      @include micro {
+        font-size: 1.75rem;
+      }
+    }
+  }
+
+  .numbers {
+    margin-left: 13rem;
+    display: flex;
+    flex-direction: column;
+    gap: 8.5rem;
+    @include small {
+      flex-direction: row;
+      justify-content: center;
+      margin-left: 0;
+      margin-top: 15rem;
+
+      @include smobile {
+        gap: 3rem;
+      }
+      flex-wrap: wrap;
+      gap: 6rem;
+    }
+
+    .info {
+      @include small {
+        text-align: center;
+      }
+      span {
+        font-weight: 400;
+        font-size: 2.3rem;
+        @include smobile {
+          font-size: 2rem;
+        }
+        @include ssmobile {
+          font-size: 1.75rem;
+        }
+        @include mini {
+          font-size: 1.5rem;
+        }
+        @include nano {
+          font-size: 1.25rem;
+        }
+      }
+    }
+  }
+}

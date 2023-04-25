@@ -1,0 +1,159 @@
+@import "../../index.scss";
+
+.offers {
+  width: 100%;
+  padding: 10rem var(--page-padding) 35rem var(--page-padding);
+  @include smaller {
+    padding: 10rem calc(var(--page-padding) * 0.75) 35rem
+      calc(var(--page-padding) * 0.75);
+  }
+  @include small {
+    padding: 10rem calc(var(--page-padding) / 3) 35rem
+      calc(var(--page-padding) / 3);
+  }
+  @include tiny {
+    padding: 10rem calc(var(--page-padding) / 4) 25rem
+      calc(var(--page-padding) / 4);
+  }
+  @include stiny {
+    padding: 10rem calc(var(--page-padding) / 5) 25rem
+      calc(var(--page-padding) / 5);
+  }
+  @include mobile {
+    padding: 10rem calc(var(--page-padding) / 8) 25rem
+      calc(var(--page-padding) / 8);
+  }
+  @include smobile {
+    padding: 10rem calc(var(--page-padding) / 10) 15rem
+      calc(var(--page-padding) / 10);
+  }
+  @include piko {
+    padding: 5rem calc(var(--page-padding) / 10) 15rem
+      calc(var(--page-padding) / 10);
+  }
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  position: relative;
+
+  h2 {
+    line-height: 115.02%;
+    font-size: 8.5rem;
+    @include larger {
+      font-size: 7rem;
+    }
+    @include tiny {
+      font-size: 6rem;
+    }
+    @include ssmobile {
+      font-size: 5rem;
+    }
+
+    @include nano {
+      font-size: 4rem;
+    }
+    font-weight: 900;
+    color: var(--gold);
+    margin-bottom: 10rem;
+    @include nano {
+      margin-bottom: 6rem;
+    }
+  }
+
+  ul {
+    width: 100%;
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    @include tiny {
+      grid-template-columns: repeat(3, 1fr);
+    }
+    @include nano {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    row-gap: 10rem;
+    @include mobile {
+      row-gap: 6rem;
+    }
+    @include mini {
+      row-gap: 3rem;
+    }
+
+    div {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      p {
+        font-weight: 400;
+        font-size: 2.25rem;
+        @include larger {
+          font-size: 2rem;
+        }
+        @include ssmobile {
+          font-size: 1.75rem;
+          padding: 0 1rem;
+        }
+        @include mini {
+          font-size: 1.3rem;
+        }
+        line-height: 149.02%;
+        text-align: center;
+        text-transform: uppercase;
+        margin: 0 auto;
+        white-space: pre-wrap;
+      }
+
+      img {
+        height: 100%;
+      }
+
+      &:nth-child(4) img,
+      &:last-child img {
+        display: none;
+      }
+
+      @include tiny {
+        &:nth-child(6) img {
+          display: none;
+        }
+        &:nth-child(4) img {
+          display: block;
+        }
+        &:nth-child(3) img {
+          display: none;
+        }
+      }
+
+      @include nano {
+        &:nth-child(2) img {
+          display: none;
+        }
+        &:nth-child(3) img {
+          display: block;
+        }
+        &:nth-child(4) img {
+          display: none;
+        }
+      }
+    }
+  }
+
+  .wheel {
+    position: absolute;
+    top: 3rem;
+    right: 0rem;
+    transform: scale(1.25);
+    @include nano {
+      scale: 0.55;
+    }
+    z-index: -1;
+    opacity: 0.7;
+    @include tiny {
+      top: 10rem;
+      height: 65%;
+    }
+  }
+}

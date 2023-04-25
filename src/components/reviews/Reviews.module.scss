@@ -1,0 +1,17 @@
+@import "../../index.scss";
+
+.reviews {
+  padding: 15rem var(--page-padding) 15rem var(--page-padding);
+  @include micro {
+    padding: 10rem calc(var(--page-padding) / 10) 15rem
+      calc(var(--page-padding) / 10);
+  }
+
+  @include nano {
+    padding: 10rem 1rem 15rem 1rem;
+  }
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}

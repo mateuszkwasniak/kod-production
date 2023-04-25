@@ -1,0 +1,88 @@
+@import "../../../index.scss";
+
+.slider {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  width: 100%;
+
+  img {
+    height: 6rem;
+    width: auto;
+    object-fit: contain;
+  }
+
+  .reviewsWrapper {
+    position: relative;
+    width: 90rem;
+    @include micro {
+      width: 100%;
+    }
+    height: 24rem;
+
+    .review {
+      width: 100%;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      opacity: 0;
+      transition: all 1s ease;
+      font-size: 2rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+
+      &.display {
+        opacity: 1;
+      }
+
+      p {
+        font-weight: 400;
+        font-size: 2.25rem;
+        @include larger {
+          font-size: 2rem;
+        }
+        @include micro {
+          font-size: 1.75rem;
+        }
+        line-height: 149.02%;
+        margin-bottom: 4rem;
+        text-align: center;
+        white-space: pre-wrap;
+      }
+
+      h4 {
+        text-align: center;
+        font-weight: 700;
+        font-size: 2.25rem;
+        @include larger {
+          font-size: 2rem;
+        }
+        @include micro {
+          font-size: 1.75rem;
+        }
+      }
+    }
+  }
+
+  .dots {
+    display: flex;
+    gap: 1rem;
+    .dot {
+      width: 1rem;
+      height: 1rem;
+      border-radius: 50%;
+      background-color: var(--white);
+      transition: all 0.7s ease-in-out;
+      cursor: pointer;
+
+      &.active {
+        background-color: var(--gold);
+      }
+    }
+  }
+}

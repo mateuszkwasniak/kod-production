@@ -1,0 +1,71 @@
+@import "../../index.scss";
+
+.footer {
+  width: 100%;
+  background-color: var(--gold);
+  padding: 3.3rem calc(var(--page-padding) / 2) 3.3rem
+    calc(var(--page-padding) / 2);
+  @include small {
+    padding: 3.3rem calc(var(--page-padding) / 3) 3.3rem
+      calc(var(--page-padding) / 3);
+  }
+  @include tiny {
+    padding: 3.3rem calc(var(--page-padding) / 4) 3.3rem
+      calc(var(--page-padding) / 4);
+  }
+  @include stiny {
+    padding: 3.3rem calc(var(--page-padding) / 5) 3.3rem
+      calc(var(--page-padding) / 5);
+  }
+  @include mobile {
+    padding: 3.3rem calc(var(--page-padding) / 8) 3.3rem
+      calc(var(--page-padding) / 8);
+  }
+  @include smobile {
+    padding: 3.3rem calc(var(--page-padding) / 10) 3.3rem
+      calc(var(--page-padding) / 10);
+  }
+  display: flex;
+  @include mini {
+    flex-direction: column;
+    gap: 3rem;
+  }
+  justify-content: space-between;
+  align-items: center;
+
+  .logo {
+    width: auto;
+    height: 3rem;
+    @include smobile {
+      height: 2.5rem;
+    }
+  }
+
+  div {
+    display: flex;
+    align-items: center;
+    gap: 6rem;
+
+    @include mobile {
+      gap: 3rem;
+    }
+
+    div {
+      display: flex;
+      align-items: center;
+      gap: 3.3rem;
+      @include mobile {
+        gap: 1.5rem;
+      }
+    }
+
+    span {
+      font-weight: 400;
+      font-size: 2.4rem;
+      @include smobile {
+        font-size: 1.75rem;
+      }
+      color: var(--black);
+    }
+  }
+}

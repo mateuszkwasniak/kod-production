@@ -1,0 +1,69 @@
+@import "../../index.scss";
+
+.camera {
+  min-height: 70vh;
+
+  @include nano {
+    min-height: 60vh;
+  }
+
+  @include heightImp {
+    margin-top: 10rem;
+  }
+
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  div {
+    position: relative;
+    @include ssmobile {
+      right: 5rem;
+    }
+    @include micro {
+      right: 0rem;
+    }
+
+    width: fit-content;
+
+    .tapeOne {
+      position: absolute;
+      left: 1.5rem;
+      top: -10rem;
+      animation-fill-mode: backwards;
+      @include micro {
+        height: 8rem;
+        top: -2rem;
+        left: 7rem;
+      }
+    }
+    .tapeTwo {
+      position: absolute;
+      right: 1.5rem;
+      top: -10rem;
+      @include micro {
+        height: 8rem;
+        top: -2rem;
+        left: 16rem;
+      }
+    }
+    .box {
+      backdrop-filter: blur(5px);
+      z-index: -3;
+      @include micro {
+        transform: scale(0.6);
+      }
+    }
+    .light {
+      position: absolute;
+      z-index: -5;
+      right: -35%;
+      @include micro {
+        height: 10rem;
+        top: 25%;
+        right: 0;
+      }
+    }
+  }
+}

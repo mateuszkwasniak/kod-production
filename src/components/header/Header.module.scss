@@ -1,0 +1,124 @@
+@import "../../index.scss";
+
+.headerWrapper {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+
+  .header {
+    width: 100%;
+    background-color: var(--bcg);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 calc(var(--page-padding) / 2);
+    @include small {
+      padding: 0 calc(var(--page-padding) / 3);
+    }
+    @include tiny {
+      padding: 0 calc(var(--page-padding) / 4);
+    }
+    @include stiny {
+      padding: 0 calc(var(--page-padding) / 5);
+    }
+    @include mobile {
+      padding: 0 calc(var(--page-padding) / 8);
+    }
+    @include smobile {
+      padding: 0 calc(var(--page-padding) / 10);
+    }
+    @include mini {
+      padding: 0 calc(var(--page-padding) / 10);
+    }
+
+    .logo {
+      cursor: pointer;
+      padding: 2rem 0;
+      @include stiny {
+        padding: 1rem 0;
+      }
+      @include stiny {
+        img {
+          height: 2.5rem;
+        }
+      }
+    }
+
+    nav {
+      ul {
+        display: flex;
+        @include stiny {
+          transform: translateX(40rem);
+          padding: 3rem;
+          -webkit-box-shadow: -9px 10px 34px -19px rgba(0, 0, 0, 1);
+          -moz-box-shadow: -9px 10px 34px -19px rgba(0, 0, 0, 1);
+          box-shadow: -9px 10px 34px -19px rgba(0, 0, 0, 1);
+          border-right: none;
+          border-top: none;
+          flex-direction: column;
+          position: absolute;
+          border-bottom-left-radius: 5px;
+          right: 0;
+          top: 4.7rem;
+          background-color: var(--black);
+          transition: all 1s ease-in-out;
+
+          a {
+            opacity: 0;
+          }
+          &.show {
+            transform: translateX(0);
+            a {
+              opacity: 1;
+            }
+          }
+        }
+        align-items: center;
+        gap: 6rem;
+        @include tiny {
+          gap: 3rem;
+        }
+        list-style: none;
+        li {
+          a {
+            white-space: nowrap;
+            text-decoration: none;
+            font-size: 2rem;
+            color: var(--white);
+            transition: all 0.3s ease-in;
+            &:hover {
+              color: var(--gold);
+            }
+          }
+        }
+      }
+
+      button {
+        display: none;
+        @include stiny {
+          display: block;
+        }
+        width: 4rem;
+        height: 4rem;
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+        border-radius: 3px;
+
+        img {
+          height: 100%;
+          width: 100%;
+          object-fit: contain;
+        }
+      }
+    }
+  }
+
+  .progressBorder {
+    height: 1px;
+    background: var(--gold);
+    transform-origin: left;
+  }
+}
