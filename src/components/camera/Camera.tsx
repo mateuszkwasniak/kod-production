@@ -7,7 +7,7 @@ import {
   MotionValue,
   useMotionValueEvent,
 } from "framer-motion";
-import transitions from "@material-ui/core/styles/transitions";
+
 
 const tape1: string = new URL(
   "../../assets/images/camera/tape.svg",
