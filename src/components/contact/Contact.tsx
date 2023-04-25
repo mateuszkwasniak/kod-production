@@ -64,6 +64,7 @@ const Contact = () => {
       if (response.ok) {
         setLoading(false);
         setStatus("Message sent successfully");
+        setFormData({ sender_name: "", sender_email: "", sender_message: "" });
       } else {
         setLoading(false);
         setStatus("Something went wrong. Please try again later");

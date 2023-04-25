@@ -16,7 +16,7 @@ const Loader = () => {
       }}
       transition={{ duration: 16, repeat: Infinity, type: "just" }}
     >
-      <img src={loader} alt="loader" />
+      <img src={loader} />
     </motion.div>
   );
 };
