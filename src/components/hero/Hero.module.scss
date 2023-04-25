@@ -115,9 +115,12 @@
       @include smobile {
         gap: 3rem;
       }
+
       @include piko {
-        gap: 1.5rem;
+        margin-top: 25rem;
+        gap: 2.5rem;
       }
+
       flex-wrap: wrap;
       gap: 6rem;
     }

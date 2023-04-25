@@ -8,6 +8,9 @@
   @include micro {
     font-size: 4rem;
   }
+  @include piko {
+    font-size: 3rem;
+  }
   font-weight: 900;
   margin-bottom: 0.75rem;
 }
