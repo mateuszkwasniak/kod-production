@@ -111,7 +111,7 @@
 
 //height
 @mixin heightImp {
-  @media (max-height: 700px) {
+  @media (max-height: 770px) {
     @content;
   }
 }
