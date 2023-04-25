@@ -102,6 +102,9 @@
     @include heightImp {
       top: 10rem;
     }
+    @include heightImpTwo {
+      top: 15rem;
+    }
 
     transition: all 0.75s ease-in-out;
     opacity: 0;
@@ -122,6 +125,10 @@
       @include nano {
         font-size: 4rem;
       }
+      @include heightImpTwo {
+        font-size: 3rem;
+      }
+
       font-weight: 900;
       color: var(--gold);
     }
@@ -135,6 +142,9 @@
       }
       @include ssmobile {
         font-size: 1.75rem;
+      }
+      @include heightImpTwo {
+        font-size: 1.5rem;
       }
 
       line-height: 149.02%;

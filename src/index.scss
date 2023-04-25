@@ -116,6 +116,12 @@
   }
 }
 
+@mixin heightImpTwo {
+  @media (max-height: 650px) {
+    @content;
+  }
+}
+
 //react-player
 .react-player__play-icon {
   display: none !important;
