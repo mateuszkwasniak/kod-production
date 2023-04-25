@@ -13,7 +13,7 @@ const video2: string =
 const Hero = () => {
   return (
     <div className={classes.hero}>
-      <video autoPlay muted loop>
+      <video muted autoPlay loop>
         <source src={video2} type="video/mp4" />
       </video>
       <motion.div
